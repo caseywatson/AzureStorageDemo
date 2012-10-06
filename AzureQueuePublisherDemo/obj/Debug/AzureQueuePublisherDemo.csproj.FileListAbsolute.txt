@@ -1,0 +1,7 @@
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueuePublisherDemo\bin\Debug\AzureQueuePublisherDemo.exe.config
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueuePublisherDemo\bin\Debug\AzureQueuePublisherDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueuePublisherDemo\bin\Debug\AzureQueuePublisherDemo.pdb
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueuePublisherDemo\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueuePublisherDemo\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueuePublisherDemo\obj\Debug\AzureQueuePublisherDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueuePublisherDemo\obj\Debug\AzureQueuePublisherDemo.pdb

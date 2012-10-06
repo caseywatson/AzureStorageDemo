@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="915D10AB-9B14-4D3D-A8B5-640F7B3D43C1" ModuleId="AzureTableDemo" />
+  <Module PersistentId="64B6E019-2B54-4C28-B30B-282EC1D7A093" ModuleId="AzureBlobDemo" />
+  <Module PersistentId="2F81E77E-AF03-4A24-AAEC-D29EE3E6ED79" ModuleId="AzureQueuePublisherDemo" />
+  <Module PersistentId="D17FBE31-DE27-4915-850B-7D834C77AB64" ModuleId="AzureQueueSubscriberDemo" />
+</Modules>

@@ -1,0 +1,10 @@
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\bin\Debug\AzureTableDemo.exe.config
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\bin\Debug\AzureTableDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\bin\Debug\AzureTableDemo.pdb
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\obj\Debug\AzureTableDemo.Form1.resources
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\obj\Debug\AzureTableDemo.Properties.Resources.resources
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\obj\Debug\AzureTableDemo.csproj.GenerateResource.Cache
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\obj\Debug\AzureTableDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureTableDemo\obj\Debug\AzureTableDemo.pdb

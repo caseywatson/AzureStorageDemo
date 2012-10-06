@@ -1,0 +1,10 @@
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\bin\Debug\AzureBlobDemo.exe.config
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\bin\Debug\AzureBlobDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\bin\Debug\AzureBlobDemo.pdb
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\obj\Debug\AzureBlobDemo.Form1.resources
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\obj\Debug\AzureBlobDemo.Properties.Resources.resources
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\obj\Debug\AzureBlobDemo.csproj.GenerateResource.Cache
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\obj\Debug\AzureBlobDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureBlobDemo\obj\Debug\AzureBlobDemo.pdb

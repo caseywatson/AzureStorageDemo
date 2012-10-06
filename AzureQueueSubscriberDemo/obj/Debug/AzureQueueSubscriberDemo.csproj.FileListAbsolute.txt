@@ -1,0 +1,7 @@
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\AzureQueueSubscriberDemo.exe.config
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\AzureQueueSubscriberDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\AzureQueueSubscriberDemo.pdb
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\obj\Debug\AzureQueueSubscriberDemo.exe
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\obj\Debug\AzureQueueSubscriberDemo.pdb

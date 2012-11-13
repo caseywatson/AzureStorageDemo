@@ -1,11 +1,11 @@
-﻿using Microsoft.WindowsAzure.StorageClient;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace AzureBlobDemo
 {
     public class BlobTreeNode : TreeNode
     {
-        public BlobTreeNode(CloudBlob blob)
+        public BlobTreeNode(ICloudBlob blob)
         {
             Blob = blob;
 
@@ -14,6 +14,6 @@ namespace AzureBlobDemo
             Text = blob.Name;
         }
 
-        public CloudBlob Blob { get; set; }
+        public ICloudBlob Blob { get; set; }
     }
 }

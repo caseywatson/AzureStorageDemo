@@ -8,8 +8,8 @@ namespace AzureTableDemo
         {
             Book = book;
 
-            ImageKey = "Book";
-            SelectedImageKey = "Book";
+            ImageKey = "Books";
+            SelectedImageKey = "Books";
             Text = book.RowKey;
         }
 

@@ -1,4 +1,4 @@
-﻿using Microsoft.WindowsAzure.StorageClient;
+﻿using Microsoft.WindowsAzure.Storage.Blob;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -18,7 +18,7 @@ namespace AzureBlobDemo
         {
             Container = container;
 
-            foreach (var blob in container.ListBlobs().OfType<CloudBlob>())
+            foreach (var blob in container.ListBlobs().OfType<ICloudBlob>())
                 Nodes.Add(new BlobTreeNode(blob));
 
             Text = container.Name;

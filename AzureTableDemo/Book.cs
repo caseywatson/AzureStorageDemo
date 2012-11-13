@@ -1,8 +1,8 @@
-﻿using Microsoft.WindowsAzure.StorageClient;
+﻿using Microsoft.WindowsAzure.Storage.Table;
 
 namespace AzureTableDemo
 {
-    public class Book : TableServiceEntity
+    public class Book : TableEntity
     {
         public Book() { }
 

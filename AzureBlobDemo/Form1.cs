@@ -1,7 +1,9 @@
 ﻿using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace AzureBlobDemo
@@ -17,12 +19,13 @@ namespace AzureBlobDemo
             InitializeComponent();
             
             // Create storage account...  
-            storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
         }
 
         private new void Refresh()
         {
             blobTree.Nodes.Clear();
+
+            // Load all blobs...
         }
 
         private void BlobTreeMouseUp(object sender, MouseEventArgs e)
@@ -67,11 +70,6 @@ namespace AzureBlobDemo
             
             // Create a new container...
 
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(e.Label);
-
-            containerRef.CreateIfNotExist();
-
             var containerNode = e.Node as ContainerTreeNode;
 
             if (containerNode == null)
@@ -93,15 +91,6 @@ namespace AzureBlobDemo
                 return;
 
             // Download blob...
-
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(blobNode.Blob.Container.Name);
-            CloudBlob blobRef = containerRef.GetBlobReference(blobNode.Text);
-
-            downloadDialog.FileName = blobRef.Name;
-
-            if (downloadDialog.ShowDialog() == DialogResult.OK)
-                blobRef.DownloadToFile(downloadDialog.FileName);
         }
 
         private void UploadBlobToolStripMenuItemClick(object sender, EventArgs e)
@@ -112,19 +101,6 @@ namespace AzureBlobDemo
                 return;
 
             // Upload blob...
-
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(containerNode.Container.Name);
-
-            if (uploadDialog.ShowDialog() == DialogResult.OK)
-            {
-                CloudBlob blobRef = containerRef.GetBlobReference(Path.GetFileName(uploadDialog.FileName));
-
-                blobRef.UploadFile(uploadDialog.FileName);
-
-                currentNode.Nodes.Add(new BlobTreeNode(blobRef));
-                currentNode.Expand();
-            }
         }
 
         private void LoadForm(object sender, EventArgs e)
@@ -140,13 +116,6 @@ namespace AzureBlobDemo
                 return;
 
             // Delete container...
-
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(containerNode.Container.Name);
-
-            containerRef.Delete();
-
-            containerNode.Remove();
         }
 
         private void DeleteBlobToolStripMenuItemClick(object sender, EventArgs e)
@@ -157,13 +126,6 @@ namespace AzureBlobDemo
                 return;
 
             // Delete blob...
-
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(blobNode.Blob.Container.Name);
-            CloudBlob blobRef = containerRef.GetBlobReference(blobNode.Blob.Name);
-
-            blobRef.Delete();
-            blobNode.Remove();
         }
 
         private void PublicContainerToolStripMenuItemClick(object sender, EventArgs e)
@@ -174,12 +136,6 @@ namespace AzureBlobDemo
                 return;
 
             // Make container public...
-
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(containerNode.Text);
-
-            containerRef.SetPermissions(new BlobContainerPermissions
-                                            {PublicAccess = BlobContainerPublicAccessType.Container});
         }
 
         private void PublicBlobsToolStripMenuItemClick(object sender, EventArgs e)
@@ -190,11 +146,6 @@ namespace AzureBlobDemo
                 return;
 
             // Make blobs public...
-
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(containerNode.Text);
-
-            containerRef.SetPermissions(new BlobContainerPermissions {PublicAccess = BlobContainerPublicAccessType.Blob});
         }
 
         private void PrivateToolStripMenuItemClick(object sender, EventArgs e)
@@ -205,11 +156,6 @@ namespace AzureBlobDemo
                 return;
 
             // Make container private...
-
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer containerRef = blobClient.GetContainerReference(containerNode.Text);
-
-            containerRef.SetPermissions(new BlobContainerPermissions {PublicAccess = BlobContainerPublicAccessType.Off});
         }
     }
 }

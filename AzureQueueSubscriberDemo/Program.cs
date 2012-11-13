@@ -1,5 +1,5 @@
 ﻿using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
 using System;
 using System.Threading;
 
@@ -22,12 +22,11 @@ namespace AzureQueueSubscriberDemo
             var queueRef = queueClient.GetQueueReference("demo");
 
             // Make sure the queue exists...
-            queueRef.CreateIfNotExist();
+            queueRef.CreateIfNotExists();
 
             while (true)
             {
                 // Get the message...
-                var message = queueRef.GetMessage();
 
                 if (message == null)
                     Console.WriteLine("No Message Available.");
@@ -36,7 +35,6 @@ namespace AzureQueueSubscriberDemo
                     Console.WriteLine("Received Message [{0}].", message.AsString);
 
                     // Delete the message...
-                    queueRef.DeleteMessage(message);
 
                     Console.WriteLine("Deleted Message [{0}].", message.AsString);
                 }

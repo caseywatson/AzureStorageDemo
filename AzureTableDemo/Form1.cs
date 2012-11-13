@@ -4,7 +4,9 @@ using System.Data.Services.Client;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.StorageClient;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Table;
+using Microsoft.WindowsAzure.Storage.Table.DataServices;
 
 namespace AzureTableDemo
 {
@@ -17,7 +19,6 @@ namespace AzureTableDemo
             InitializeComponent();
 
             // Create storage account...
-            storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
         }
 
         private void Refresh(IEnumerable<Book> books)
@@ -31,40 +32,16 @@ namespace AzureTableDemo
         private void LoadAllBooks()
         {
             // Load all books...
-
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-            TableServiceContext tableContext = tableClient.GetDataServiceContext();
-
-            tableClient.CreateTableIfNotExist("Book");
-
-            Refresh(tableContext.CreateQuery<Book>("Book").AsTableServiceQuery<Book>());
         }
 
         private void LoadAllBooksThatStartWithTheLetterC()
         {
             // Load all books that start with the letter "C" using a partition scan...
-
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-            TableServiceContext tableContext = tableClient.GetDataServiceContext();
-
-            tableClient.CreateTableIfNotExist("Book");
-
-            Refresh(
-                tableContext.CreateQuery<Book>("Book").Where(
-                    b => (b.RowKey.CompareTo("C") >= 0) && (b.RowKey.CompareTo("D") < 0)).AsTableServiceQuery());
         }
 
         private void LoadAllBooksInTheBiographyCategory()
         {
             // Load all books in the "Biography" category...
-
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-            TableServiceContext tableContext = tableClient.GetDataServiceContext();
-
-            tableClient.CreateTableIfNotExist("Book");
-
-            Refresh(
-                tableContext.CreateQuery<Book>("Book").Where(b => b.PartitionKey == "Biography").AsTableServiceQuery());
         }
 
         private void CreateNewBook()
@@ -103,17 +80,6 @@ namespace AzureTableDemo
 
             // Save the book...
 
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-            TableServiceContext tableContext = tableClient.GetDataServiceContext();
-
-            var book = new Book(bookTitle.Text, bookAuthor.Text, bookCategory.Text);
-
-            tableClient.CreateTableIfNotExist("Book");
-
-            tableContext.AttachTo("Book", book);
-            tableContext.UpdateObject(book);
-            tableContext.SaveChangesWithRetries(SaveChangesOptions.ReplaceOnUpdate);
-
             CreateNewBook();
         }
 
@@ -125,19 +91,6 @@ namespace AzureTableDemo
             var bookNode = bookTree.SelectedNode as BookTreeNode;
 
             // Delete the book...
-
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-            TableServiceContext tableContext = tableClient.GetDataServiceContext();
-
-            Book book = tableContext.CreateQuery<Book>("Book").Where(b =>
-                                                                     b.PartitionKey == bookNode.Book.PartitionKey &&
-                                                                     b.RowKey == bookNode.Book.RowKey).FirstOrDefault();
-
-            if (book == null)
-                throw new InvalidOperationException("The requested book was not found.");
-
-            tableContext.DeleteObject(book);
-            tableContext.SaveChangesWithRetries();
 
             CreateNewBook();
             LoadAllBooks();

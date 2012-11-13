@@ -2,6 +2,14 @@ C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQ
 C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\AzureQueueSubscriberDemo.exe
 C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\AzureQueueSubscriberDemo.pdb
 C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
-C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
 C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\obj\Debug\AzureQueueSubscriberDemo.exe
 C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\obj\Debug\AzureQueueSubscriberDemo.pdb
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.Data.Edm.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.Data.OData.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\System.Spatial.dll
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.Data.Edm.xml
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.Data.OData.xml
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\bin\Debug\System.Spatial.xml
+C:\Users\casey_000\Documents\Visual Studio 2012\Projects\AzureStorageDemo\AzureQueueSubscriberDemo\obj\Debug\AzureQueueSubscriberDemo.csprojResolveAssemblyReference.cache

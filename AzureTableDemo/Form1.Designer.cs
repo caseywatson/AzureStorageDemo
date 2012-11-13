@@ -117,7 +117,7 @@
             // 
             this.treeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("treeImageList.ImageStream")));
             this.treeImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.treeImageList.Images.SetKeyName(0, "Book");
+            this.treeImageList.Images.SetKeyName(0, "Books");
             // 
             // toolStrip1
             // 
